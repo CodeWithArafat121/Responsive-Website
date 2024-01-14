@@ -6,7 +6,7 @@ nav {
     display: flex;
     justify-content: space-around;
     align-items: center;
-    padding-top: 3.1rem ;
+    padding-top: 3.1rem;
 }
 
 nav ul {
@@ -41,9 +41,6 @@ nav ul li a {
 }
 
 .banner-heading .banner-description {
-    color: var(--Dark-03, #727272);
-    font-weight: 400;
-    line-height: 1.6rem;
     margin-bottom: 2rem;
 }
 
@@ -54,6 +51,80 @@ nav ul li a {
     margin: 0px auto;
 }
 
-#banner .banner-img img{
+#banner .banner-img img {
+    width: 100%;
     border-radius: 8px;
+}
+
+#team .team-container {
+    width: 68%;
+    max-width: 1318px;
+    margin: 150px auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 4.5rem;
+}
+
+.team-container .team-img {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.5rem;
+}
+
+.team-container .team-img img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+#team .team-text {
+    width: 100%;
+    max-width: 537px;
+}
+
+#team .team-text .Quick-list {
+    color: var(--Dark-03, #727272);
+    font-weight: 500;
+}
+
+#team .team-text .Features {
+    color: #FF900E;
+}
+
+@media screen and (max-width:576px) {
+
+    nav,
+    ul,
+    .team-container {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 1rem;
+    }
+
+    #banner .banner-heading {
+        width: fit-content;
+        margin: 3rem auto;
+    }
+
+    .team-container{
+        text-align: center;
+    }
+}
+
+@media screen and (min-width:576px) and (max-width:960px) {
+    nav {
+        flex-direction: column;
+    }
+
+    nav ul {
+        margin-top: 2rem
+    }
+
+    #banner .banner-heading {
+        width: fit-content;
+        margin: 3rem auto;
+    }
 }
